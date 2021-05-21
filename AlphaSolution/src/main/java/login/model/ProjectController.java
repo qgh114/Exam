@@ -25,4 +25,8 @@ public class ProjectController {
     public void deleteProject(int projectId) throws SQLException{
         facade.deleteProject(projectId);
     }
+
+    public void editProject(String name, int projectId) throws SQLException{
+        facade.editProject(name,projectId);
+    }
 }

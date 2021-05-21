@@ -57,6 +57,21 @@ public class ProjectMapper {
         }
     }
 
+    public void editProject(String name, int projectId) throws SQLException{
+        try {
+            Connection con = DBManager.getConnection();
+            String SQL = "UPDATE Project SET name = ? WHERE project_id = ?;";
+            PreparedStatement ps = con.prepareStatement(SQL);
+            ps.setString(1, name);
+            ps.setInt(2, projectId);
+            ps.executeUpdate();
+        } catch (SQLException ex) {
+            throw new SQLException(ex.getMessage());
+        }
+    }
+
+
+
 
 
 

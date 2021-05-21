@@ -54,4 +54,8 @@ public class DataFacade {
         projectMapper.deleteProject(projectId);
     }
 
+    public void editProject(String name, int projectId) throws SQLException{
+        projectMapper.editProject(name,projectId);
+    }
+
 }

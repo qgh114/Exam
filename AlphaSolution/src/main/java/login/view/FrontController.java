@@ -81,6 +81,8 @@ public class FrontController {
         return "create-project";
     }
 
+
+
     @GetMapping("/{id}/create-task")
     public String createTask1(@PathVariable("id") int projectId, Model model)  {
         model.addAttribute("projectId", projectId);
@@ -98,15 +100,7 @@ public class FrontController {
         return "redirect:/home";
     }
 
-/*
-    @GetMapping("/{id}/delete-project")
-    public String deleteProject1(@PathVariable("id") int projectId, Model model)  {
-        model.addAttribute("projectId", projectId);
 
-        return "delete-project";
-    }
-
-*/
 
     @GetMapping("/{id}/delete-project")
     public String deleteProject1(@PathVariable("id") int projectId, Model model) throws SQLException {
