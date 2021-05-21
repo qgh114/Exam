@@ -28,6 +28,7 @@ CREATE TABLE `Task` (
   `project_id` int DEFAULT NULL,
   `name` varchar(50) DEFAULT NULL,
   `time` int DEFAULT NULL,
+   `price` int DEFAULT NULL,
   PRIMARY KEY (`task_id`),
   UNIQUE KEY `task_Id` (`task_id`),
   KEY `project_id` (`project_id`),
