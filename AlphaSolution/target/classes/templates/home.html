@@ -40,7 +40,7 @@
             <a th:href="@{{id}/create-task(id=${project.projectId})}" class="btn btn-create">Opret opgave</a>
             <!-- http://www.thymeleaf.org/doc/articles/standardurlsyntax.html -->
             <a th:href="@{{id}/details(id=${project.projectId})}" class="btn btn-details">Detaljer</a>
-            <a th:href="@{{id}/edit(id=${project.projectId})}" class="btn btn-ed">Rediger</a>
+            <a th:href="@{{id}/edit-project(id=${project.projectId})}" class="btn btn-ed">Rediger</a>
             <a th:href="@{{id}/delete-project(id=${project.projectId})}" class="btn btn-del">Slet</a>
         </td>
     </tr>

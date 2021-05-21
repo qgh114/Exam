@@ -58,4 +58,8 @@ public class DataFacade {
         projectMapper.editProject(name,projectId);
     }
 
+    public String findProject(int projectId) throws SQLException{
+        return projectMapper.findProject(projectId);
+    }
+
 }

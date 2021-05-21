@@ -113,6 +113,28 @@ public class FrontController {
 
 
 
+    @GetMapping("/{id}/edit-project")
+    public String editProject1(@PathVariable("id") int projectId, Model model, WebRequest request) throws SQLException {
+        model.addAttribute("projectId", projectId);
+        model.addAttribute("Project", projectController.findProject(projectId));
+
+        return "edit";
+    }
+
+
+    @PostMapping("/{id}/edit-project")
+    public String editProject(@PathVariable("id") int projectId, WebRequest request, Model model) throws SQLException {
+        //User user = (User) request.getAttribute("user",WebRequest.SCOPE_SESSION);
+        //model.addAttribute("Project",projectController.showProjectList(user));
+
+        String name = request.getParameter("edit-project-name");
+        projectController.editProject(name,projectId);
+
+        return "redirect:/home";
+    }
+
+
+
     @GetMapping("/{id}/details")
     public String showDetails1(@PathVariable("id") int projectId, Model model) throws SQLException {
         model.addAttribute("projectId", projectId);

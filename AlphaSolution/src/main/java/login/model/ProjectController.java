@@ -29,4 +29,8 @@ public class ProjectController {
     public void editProject(String name, int projectId) throws SQLException{
         facade.editProject(name,projectId);
     }
+
+    public String findProject(int projectId) throws SQLException{
+        return facade.findProject(projectId);
+    }
 }
