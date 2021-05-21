@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="stylesheet.css">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+</head>
+<body>
+
+<header>
+    <div class="top-nav">
+        <a href="/home">Kalkulationsværktøj</a>
+        <div class="topnav-right">
+            <a href="/home"> Mine Projekter </a>
+            <a href="/register-login">Log ud</a>
+        </div>
+    </div>
+</header>
+
+    <form name="create" th:action="@{/{id}/create-task(id=${projectId})}" method="POST">
+        Opgavenavn:<br>
+            <input type="text" name="task-name">
+         <br>
+        Tidsestimat:<br>
+            <input type="number" name="task-time">
+        <br>
+            <input type="submit" value="Opret opgave" class="btn-create">
+        <br>
+    </form>
+
+    <br>
+    <br>
+    <br>
+
+</body>
+</html>
