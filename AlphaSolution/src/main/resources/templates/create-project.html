@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="stylesheet.css">
+<head>
+    <meta charset="UTF-8">
+    <title>Projekt</title>
+</head>
+<body>
+<header>
+    <div class="top-nav">
+        <a href="home">Kalkulationsværktøj</a>
+        <div class="topnav-right">
+            <a href="/home"> Mine Projekter </a>
+            <a href="/register-login">Log ud</a>
+        </div>
+    </div>
+</header>
+
+<br>
+<br>
+
+<table>
+<tr>
+    <td>
+        <form name="create" action="/create-project" method="POST">
+            Projekt navn:<br>
+            <input type="text" name="project-name">
+            <br>
+            <input type="submit" value="Opret opgave" class="btn btn-create">
+        </form>
+    </td>
+</tr>
+</table>
+<div th:replace="footer.html">...</div>
+</body>
+</html>
